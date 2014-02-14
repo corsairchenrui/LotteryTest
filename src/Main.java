@@ -190,12 +190,12 @@ public class Main {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String fileName = "F:\\workspace\\LotteryTest\\resource\\data";
-		Session s = Session.newSession(fileName);
-		s.parse();
-		s.getChoices(s.random(5));
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		String fileName = "F:\\workspace\\LotteryTest\\resource\\data";
+//		Session s = Session.newSession(fileName);
+//		s.parse();
+//		s.getChoices(s.random(5));
+//	}
 
 }

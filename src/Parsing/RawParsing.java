@@ -272,32 +272,32 @@ public class RawParsing {
 		}
 	}
 
-	public static void main(String[] args) {
-		
-		File dir = new File("E:\\");
-		File[] raw = dir.listFiles(new FilenameFilter() {
-			
-			@Override
-			public boolean accept(File dir, String name) {
-				if(name.startsWith("raw"))
-					return true;
-				return false;
-			}
-		});
-//		for(File f:raw){
-//			try {
-//				step2(step1(new FileInputStream(f)));
-//			} catch (FileNotFoundException e) {
-//				e.printStackTrace();
+//	public static void main(String[] args) {
+//		
+//		File dir = new File("E:\\");
+//		File[] raw = dir.listFiles(new FilenameFilter() {
+//			
+//			@Override
+//			public boolean accept(File dir, String name) {
+//				if(name.startsWith("raw"))
+//					return true;
+//				return false;
 //			}
+//		});
+////		for(File f:raw){
+////			try {
+////				step2(step1(new FileInputStream(f)));
+////			} catch (FileNotFoundException e) {
+////				e.printStackTrace();
+////			}
+////		}
+//		try {
+//			step2((new FileInputStream(new File("E:\\stuff\\step2\\20131217"))));
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
 //		}
-		try {
-			step2((new FileInputStream(new File("E:\\stuff\\step2\\20131217"))));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	}
 	
 
 }

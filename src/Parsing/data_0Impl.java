@@ -23,11 +23,19 @@ public class data_0Impl extends MySQLEntity {
 	@field(type="int")
 	protected int visitteamid;
 	@field(type="int")
-	protected int difference;
+	protected int difference = 0;
+	@field(type="int")
+	protected int concede = 0;
+	@field(type="int")
+	protected int hgoal = 0;
+	@field(type="int")
+	protected int agoal = 0;
 	@field(type="int")
 	protected int hRanking;
 	@field(type="int")
 	protected int aRanking;
+	@field(type="int")
+	protected int level = 4;
 	public String getDate() {
 		return date;
 	}
@@ -76,16 +84,42 @@ public class data_0Impl extends MySQLEntity {
 	public void setDifference(int difference) {
 		this.difference = difference;
 	}
-	public int gethRanking() {
+	public int getHRanking() {
 		return hRanking;
 	}
-	public void sethRanking(int hRanking) {
+	public void setHRanking(int hRanking) {
 		this.hRanking = hRanking;
 	}
-	public int getaRanking() {
+	public int getARanking() {
 		return aRanking;
 	}
-	public void setaRanking(int aRanking) {
+	public void setARanking(int aRanking) {
 		this.aRanking = aRanking;
 	}
+	public int getLevel() {
+		return level;
+	}
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	public int getConcede() {
+		return concede;
+	}
+	public void setConcede(int concede) {
+		this.concede = concede;
+	}
+	public int getHgoal() {
+		return hgoal;
+	}
+	public void setHgoal(int hgoal) {
+		this.hgoal = hgoal;
+	}
+	public int getAgoal() {
+		return agoal;
+	}
+	public void setAgoal(int agoal) {
+		this.agoal = agoal;
+	}
+	
+
 }
