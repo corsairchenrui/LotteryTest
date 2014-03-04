@@ -41,7 +41,7 @@ public class ResultRetriever {
 	}
 	
 	public void add(Node node){
-		data_0Impl match = factory.parse(node);
+		data_0Impl match = factory.parse1(node);
 		if(match!=null)
 			matches.add(match);
 	}
@@ -51,16 +51,18 @@ public class ResultRetriever {
 //		args = new String[2];
 //		args[1] = "140208";
 		try {
-			new ResultRetriever(args[0]).proceed();
+//			new ResultRetriever(args[0]).proceed();
+			new ResultRetriever(null).proceed();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	private void proceed() throws IOException {
-		Document doc = Jsoup.connect("http://888.qq.com/info/bf/index.php?mod=football&op=jczq&qihao="+issue).get();
-		for(Node n:doc.getElementById("tb_qihao").childNodes()){
-			if(n.nodeName().equals("tr"))
+//		Document doc = Jsoup.connect("http://888.qq.com/info/bf/index.php?mod=football&op=jczq&qihao="+issue).get();
+		Document doc = Jsoup.connect("http://live.caipiao.163.com/dcbf/?date=40204").get();
+		for(Node n:doc.getElementById("gameList").childNodes()){
+			if(n.nodeName().equals("dd"))
 				add(n);
 		}
 		dao.insert(matches);

@@ -3,7 +3,6 @@ package Parsing;
 import MySQL.MySQLEntity;
 import MySQL.field;
 
-
 public class data_0Impl extends MySQLEntity {
 	public data_0Impl(String tablename) {
 		super(tablename);
